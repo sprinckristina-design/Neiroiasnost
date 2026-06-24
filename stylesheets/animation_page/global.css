@@ -1,0 +1,47 @@
+:root {
+  --custom-blue: #2B6ED4;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(11px, 3vw, 46px);
+  color: #fff;
+}
+
+h3 {
+  font-size: clamp(30px, 3vw, 57px);
+  color: #fff;
+}
+
+p {
+  font-size: clamp(8px, 2vw, 31px);
+  color: var(--custom-blue);
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 2vw, 20px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .first-section header {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(12px, 2vw, 20px);
+    padding: 0;
+  }
+
+  .first-section .header__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+

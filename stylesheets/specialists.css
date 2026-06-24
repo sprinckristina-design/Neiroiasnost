@@ -1,0 +1,85 @@
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.specialists__container {
+  max-width: 740px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: clamp(25px, 8vw, 110px);
+  padding: clamp(30px, 10vw, 130px) 15px clamp(30px, 5vw, 60px);
+}
+
+.specialist {
+  flex: 1;
+  min-width: 0;
+}
+
+.specialist img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text {
+  margin-top: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+.text h3 {
+  margin: 0;
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: clamp(15px, 2vw, 18px);
+}
+
+.text p { 
+  margin: 0;
+  font-family: 'Montserrat-Medium', sans-serif;
+  color: #2A2A2A;
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.specialist button {
+  width: 100%;
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-size: clamp(12px, 1.6vw, 16px);
+  padding: 6px 0;
+  background-color: #2B6ED4;
+  color: #FFF;
+  border: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.specialist button:hover {
+  background-color: #2765c2;
+}
+
+@media (max-width: 480px) {
+  .specialists__container {
+    max-width: 220px;
+    flex-direction: column;
+    gap: 45px;
+    padding-top: 26px;
+  }
+
+  .text {
+    margin-top: 6px;
+    gap: 3px;
+    margin-bottom: 10px;
+  }
+}

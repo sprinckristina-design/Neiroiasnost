@@ -1,0 +1,118 @@
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.events section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.events section > div {
+  display: contents;
+}
+
+.events img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  display: block;
+}
+
+.withShadow {
+  filter: drop-shadow(4px -1px 13.6px rgba(0, 0, 0, 0.1));
+}
+
+.events button {
+  display: block;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+  font-family: 'Montserrat-Medium', sans-serif;
+  font-size: 20px;
+  padding: 9px 0;
+  background-color: #2B6ED4;
+  color: #FFF;
+  border: none;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.events button:hover {
+  background-color: #2765c2;
+}
+
+.events section.lastPostersSection {
+  display: block;
+}
+
+.events section.lastPostersSection > .lastPosters {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+
+.events section.lastPostersSection > .lastPosters img {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+}
+
+
+
+@media (max-width: 400px) {
+  .events {
+    gap: 10px;
+    margin: 0 6px;
+  }
+
+  .events section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .events section > div {
+    display: flex;
+    gap: 10px;
+  }
+
+  .events section > div img {
+    width: calc((100% - 10px) / 2);
+  }
+
+  .events section > img {
+    width: 100%;
+  }
+
+  .events section.lastPostersSection > .lastPosters {
+    gap: 10px;
+  }
+
+  .events section.lastPostersSection > .lastPosters img {
+    width: calc((100% - 10px) / 2);
+  }
+
+  .events button {
+    max-width: 220px;
+    font-size: 10px;
+    padding: 7px 0;
+    margin-bottom: 25px;
+  }
+}

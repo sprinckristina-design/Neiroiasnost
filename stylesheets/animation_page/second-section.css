@@ -1,0 +1,76 @@
+.ss-game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(2px, 1vw, 7px);
+  margin-bottom: clamp(8px, 2vw, 30px);
+}
+.ss-game-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  position: relative;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.ss-game-img:active {
+  cursor: grabbing;
+}
+.ss-game-ghost-source {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.ss-game-drop-target {
+  outline: 2px solid var(--custom-blue);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.ss-game-drag-clone {
+  transition: none;
+  box-shadow:
+    0 4px 24px rgba(43, 110, 212, 0.25),
+    0 12px 40px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  will-change: transform;
+}
+.ss-game-drag-clone .ss-game-1-standart {
+  opacity: 1;
+}
+.ss-game-drag-clone .ss-game-1-white {
+  opacity: 0;
+}
+.ss-game-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+.ss-game--solved .ss-game-1-standart {
+  opacity: 0;
+}
+.ss-game--solved .ss-game-1-white {
+  opacity: 1;
+}
+.ss-game-1-white{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.ss-underGame {
+  display: grid;
+  gap: clamp(2px, 1vw, 7px);
+  grid-template-columns: repeat(3, 1fr);
+  height: clamp(60px, 20vw, 237px);
+}
+.ss-underGame h2 {
+  background: linear-gradient(var(--custom-blue), #fff);  
+  padding-top: clamp(8px, 2vw, 26px);
+  padding-left: clamp(5px, 2vw, 20px);
+}

@@ -1,0 +1,27 @@
+.error404 {
+  color: #2B6ED4;
+  font-family: "Montserrat-Bold", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(90px, 30vw, 300px);
+  padding-top: clamp(30px, 27vw, 130px);
+}
+
+@media (max-width: 400px) {
+  .error404 {
+    padding-top: 26px;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+}

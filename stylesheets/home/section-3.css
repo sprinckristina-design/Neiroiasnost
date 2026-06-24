@@ -1,0 +1,30 @@
+.section-3 {
+  overflow-x: hidden;
+}
+
+.section-3-wrapper {
+  height: 489px;
+  display: flex;
+  gap: 40px;
+  animation: running-ribbot 15s linear infinite;
+}
+
+@keyframes running-ribbot {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-223.1%);
+  }
+}
+
+.section-3:hover .section-3-wrapper {
+  animation-play-state: paused;
+}
+
+@media (max-width: 400px) {
+  .section-3-wrapper {
+    height: 200px;
+    gap: 12px;
+  }
+}

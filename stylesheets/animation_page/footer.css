@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(130px, 33vw, 487px);
+  background-color: var(--custom-blue);
+}
+
+.footer h2 {
+  text-align: center;
+  font-size: clamp(20px, 4vw, 50px);
+  max-width: clamp(265px, 70vw, 658px);
+  text-transform: uppercase;
+}
